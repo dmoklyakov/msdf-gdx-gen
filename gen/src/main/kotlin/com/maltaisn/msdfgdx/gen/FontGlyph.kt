@@ -31,9 +31,9 @@ class FontGlyph {
     var height: Int = 0
 
     // Glyph metrics
-    var xOffset: Int = 0
-    var yOffset: Int = 0
-    var xAdvance: Int = 0
+    var xOffset: Float = 0f
+    var yOffset: Float = 0f
+    var xAdvance: Float = 0f
 
     /** Bit field of texture channels where glyph is encoded. **/
     var channels: Int = CHANNELS_NONE

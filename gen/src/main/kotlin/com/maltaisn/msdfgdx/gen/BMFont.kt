@@ -127,9 +127,9 @@ class BMFont(
         val ty = -bounds.y - bounds.height - pad
         val path = glyphVector.getGlyphOutline(0, tx.toFloat(), ty.toFloat()) as GeneralPath
 
-        glyph.xOffset = (bounds.x - pad).roundToInt()
-        glyph.yOffset = (fontMetrics.ascent + bounds.y - pad).roundToInt()
-        glyph.xAdvance = glyphVector.getGlyphMetrics(0).advanceX.roundToInt()
+        glyph.xOffset = (bounds.x - pad).toFloat()
+        glyph.yOffset = (fontMetrics.ascent + bounds.y - pad).toFloat()
+        glyph.xAdvance = glyphVector.getGlyphMetrics(0).advanceX
 
         // Generate main glyph image.
         val gen = MsdfGen(params.msdfgen, w, h, params.distanceRange, Shape.fromPath(path).toString())
